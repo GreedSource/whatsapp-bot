@@ -1,5 +1,5 @@
 import dialogflow from "@google-cloud/dialogflow";
-require("dotenv").config();
+
 // const config = require("./config");
 
 const credentials = {

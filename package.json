@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:dialogflow": "ts-node ./utils/dialogflow.ts",
-    "start": "ts-node index.ts"
+    "test:dialogflow": "nodemon ./utils/dialogflow.ts"
   },
   "dependencies": {
     "@google-cloud/dialogflow": "^4.6.0",

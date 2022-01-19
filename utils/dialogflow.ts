@@ -1,5 +1,5 @@
 import dialogflow from "@google-cloud/dialogflow";
-
+require("dotenv").config();
 // const config = require("./config");
 
 const credentials = {
@@ -23,8 +23,9 @@ const sendToDialogFlow = async (
 ): Promise<any> => {
   let textToDialogFlow = msg;
   try {
+    console.log(process.env.GOOGLE_PROJECT_ID);
     const sessionPath = sessionClient.projectAgentSessionPath(
-      process.env.GOOGLE_PROJECT_ID,
+      process.env.GOOGLE_PROJECT_ID || "",
       session
     );
 
@@ -46,15 +47,16 @@ const sendToDialogFlow = async (
     const responses = await sessionClient.detectIntent(request);
     console.log("Detected intent");
     const result = responses[0].queryResult;
+
     if (result) {
       console.log(`  Query: ${result.queryText}`);
       console.log(`  Response: ${result.fulfillmentText}`);
       if (result.intent) {
         console.log(`  Intent: ${result.intent.displayName}`);
-        return result.fulfillmentText;
       } else {
         console.log("  No intent matched.");
       }
+      return result.fulfillmentText;
     } else {
       throw new Error("No response from DialogFlow");
     }

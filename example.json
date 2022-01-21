@@ -1,0 +1,61 @@
+{
+  "fulfillmentMessages": [
+    {
+      "platform": "PLATFORM_UNSPECIFIED",
+      "text": { "text": ["¡Hola!"] },
+      "message": "text"
+    },
+    {
+      "platform": "PLATFORM_UNSPECIFIED",
+      "text": { "text": ["Second response"] },
+      "message": "text"
+    }
+  ],
+  "outputContexts": [
+    {
+      "name": "projects/konter-bot-qtpp-338618/agent/sessions/14155238886@c.us/contexts/__system_counters__",
+      "lifespanCount": 1,
+      "parameters": {
+        "fields": {
+          "no-input": { "numberValue": 0, "kind": "numberValue" },
+          "no-match": { "numberValue": 0, "kind": "numberValue" }
+        }
+      }
+    }
+  ],
+  "queryText": "You said :Hola.\n Configure your WhatsApp Sandbox's Inbound URL to change this message.",
+  "speechRecognitionConfidence": 0,
+  "action": "input.welcome",
+  "parameters": { "fields": {} },
+  "allRequiredParamsPresent": true,
+  "fulfillmentText": "Second response",
+  "webhookSource": "",
+  "webhookPayload": null,
+  "intent": {
+    "inputContextNames": [],
+    "events": [],
+    "trainingPhrases": [],
+    "outputContexts": [],
+    "parameters": [],
+    "messages": [],
+    "defaultResponsePlatforms": [],
+    "followupIntentInfo": [],
+    "name": "projects/konter-bot-qtpp-338618/agent/intents/ca625e56-a687-4e77-86fd-4b6ecfbb627b",
+    "displayName": "Default Welcome Intent",
+    "priority": 0,
+    "isFallback": false,
+    "webhookState": "WEBHOOK_STATE_UNSPECIFIED",
+    "action": "",
+    "resetContexts": false,
+    "rootFollowupIntentName": "",
+    "parentFollowupIntentName": "",
+    "mlDisabled": false,
+    "liveAgentHandoff": false,
+    "endInteraction": false
+  },
+  "intentDetectionConfidence": 0.6649639010429382,
+  "diagnosticInfo": null,
+  "languageCode": "es",
+  "sentimentAnalysisResult": null,
+  "cancelsSlotFilling": false
+}
